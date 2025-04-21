@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Post = () => {
+const Post = (props) => {
+
   return (
     <div>
-        <p>Andherson Castro</p>
-        <p>I love React.js!</p>
+        <p>{props.author}</p>
+        <p>{props.message}</p>
     </div>
   )
 }

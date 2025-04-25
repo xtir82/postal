@@ -1,12 +1,13 @@
 import React from 'react'
+import styles from './Post.module.css'
 
-const Post = (props) => {
+const Post = ({author, message}) => {
 
   return (
-    <div>
-        <p>{props.author}</p>
-        <p>{props.message}</p>
-    </div>
+    <li className={styles.post}>
+        <p className={styles.author}>{author}</p>
+        <p className={styles.message}>{message}</p>
+    </li>
   )
 }
 

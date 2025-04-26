@@ -73,20 +73,3 @@ postal/
 └── vite.config.js      # Vite configuration
 ```
 
-## Building for Production
-
-To build the application for production:
-
-```
-npm run build
-```
-
-This will generate optimized files in the `dist` directory that can be deployed to a web server.
-
-## License
-
-[MIT License](LICENSE)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.

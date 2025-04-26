@@ -1,12 +1,92 @@
-# React + Vite
+# Postal - A Social Media Post Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Postal is a modern React application that allows users to create, view, and interact with social media posts. Built with React 19 and React Router, it provides a seamless user experience for sharing thoughts and ideas.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **View Posts**: Browse through a list of posts on the home page
+- **Create Posts**: Add new posts with your name and message
+- **View Post Details**: Click on any post to see its full details
+- **Responsive Design**: Works on both desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19**: For building the user interface
+- **React Router 7**: For navigation and routing
+- **React Icons**: For UI elements
+- **Vite**: As the build tool and development server
+- **CSS Modules**: For component-scoped styling
+- **RESTful API**: Backend communication for data persistence
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd postal
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+4. Start the backend server (required for the application to work):
+   ```
+   # The application expects a backend server running at http://localhost:8080
+   # Follow the backend setup instructions if provided separately
+   ```
+
+## Usage
+
+After starting both the frontend and backend servers:
+
+1. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal)
+2. Browse existing posts on the home page
+3. Click on a post to view its details
+4. Click the "Create Post" button to add a new post
+5. Fill in your name and message, then submit
+
+## Project Structure
+
+```
+postal/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # Reusable UI components
+│   │   ├── Modal.jsx   # Modal component for overlays
+│   │   ├── Post.jsx    # Individual post component
+│   │   └── PostsList.jsx # List of posts component
+│   ├── routes/         # Application routes
+│   │   ├── NewPost.jsx # Create post page
+│   │   ├── PostDetails.jsx # Post details page
+│   │   ├── Posts.jsx   # Main posts listing page
+│   │   └── RootLayout.jsx # Root layout with common elements
+│   ├── index.css       # Global styles
+│   └── main.jsx        # Application entry point with routing
+├── package.json        # Project dependencies and scripts
+└── vite.config.js      # Vite configuration
+```
+
+## Building for Production
+
+To build the application for production:
+
+```
+npm run build
+```
+
+This will generate optimized files in the `dist` directory that can be deployed to a web server.
+
+## License
+
+[MIT License](LICENSE)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
